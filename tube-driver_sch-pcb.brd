@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="25" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
+<grid distance="0.25" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="GND" color="11" fill="1" visible="no" active="yes"/>
@@ -150,7 +150,7 @@
 <layer number="254" name="cooling" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYjllNWFm" projecturn="a.cGVyc29uYWw6dWUyYjllNWFmIzIwMTkxMDE5MjI4NzM0NTgx" f3durn="urn:adsk.wipprod:dm.lineage:UOlpTiM0SG240spYVLI8lw" pcbguid="77afd29c-32cb-411e-83ac-e2ab0f91457c" lastpulledtime="" lastsyncedchangeguid="183bf50f-bc29-5e7e-32a7-a9ee917497f3"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYjllNWFm" projecturn="a.cGVyc29uYWw6dWUyYjllNWFmIzIwMTkxMDE5MjI4NzM0NTgx" f3durn="urn:adsk.wipprod:dm.lineage:UOlpTiM0SG240spYVLI8lw" pcbguid="77afd29c-32cb-411e-83ac-e2ab0f91457c" lastpulledtime="" lastsyncedchangeguid="2c6301ce-06ae-837c-a818-5b95e475ee39"/>
 <plain>
 <wire x1="97" y1="0" x2="100" y2="3" width="0" layer="20" curve="90"/>
 <wire x1="100" y1="3" x2="100" y2="97" width="0" layer="20"/>
