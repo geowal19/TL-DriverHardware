@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -274,8 +274,9 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="FARNELL" value="8738041" constant="no"/>
-<attribute name="PRICE_PER" value="0.0811" constant="no"/>
+<attribute name="DIGIKEY" value="1727-5211-1-ND" constant="no"/>
+<attribute name="HEIGHT" value="1.2" constant="no"/>
+<attribute name="PRICE_PER" value="0.29" constant="no"/>
 <attribute name="VALUE" value="PMEG4010BEA" constant="no"/>
 </technology>
 </technologies>
@@ -307,6 +308,7 @@
 <part name="D11" library="DIODES" deviceset="PMEG4010BEA" device="" value="PMEG4010BEA"/>
 <part name="D12" library="DIODES" deviceset="PMEG4010BEA" device="" value="PMEG4010BEA"/>
 <part name="D13" library="DIODES" deviceset="PMEG4010BEA" device="" value="PMEG4010BEA"/>
+<part name="D14" library="OPTO" deviceset="JE2835AWT-00-0000-0B0A0UF735E" device="" value="3500K"/>
 </parts>
 <sheets>
 <sheet>
@@ -365,6 +367,10 @@
 <instance part="D13" gate="G$1" x="-12.7" y="-12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="-15.24" y="-12.7" size="1.27" layer="95" rot="R90" align="center"/>
 <attribute name="VALUE" x="-10.16" y="-12.7" size="1.27" layer="96" rot="R90" align="center"/>
+</instance>
+<instance part="D14" gate="G$1" x="0" y="-63.5" smashed="yes" rot="R270">
+<attribute name="NAME" x="-2.54" y="-63.5" size="1.27" layer="95" rot="R270" align="center"/>
+<attribute name="VALUE" x="-5.08" y="-63.5" size="1.27" layer="96" rot="R270" align="center"/>
 </instance>
 </instances>
 <busses>
@@ -467,17 +473,24 @@
 <net name="CATHODE" class="0">
 <segment>
 <pinref part="D12" gate="G$1" pin="A"/>
-<wire x1="-25.4" y1="-17.78" x2="-25.4" y2="-58.42" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="-58.42" x2="-12.7" y2="-58.42" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="-58.42" x2="0" y2="-58.42" width="0.1524" layer="91"/>
-<wire x1="0" y1="-58.42" x2="22.86" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="-17.78" x2="-25.4" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="-71.12" x2="-12.7" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-71.12" x2="0" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="0" y1="-71.12" x2="22.86" y2="-71.12" width="0.1524" layer="91"/>
+<junction x="0" y="-71.12"/>
+<pinref part="D13" gate="G$1" pin="A"/>
+<wire x1="-12.7" y1="-17.78" x2="-12.7" y2="-71.12" width="0.1524" layer="91"/>
+<junction x="-12.7" y="-71.12"/>
+<label x="2.54" y="-71.12" size="1.778" layer="95"/>
+<wire x1="0" y1="-68.58" x2="0" y2="-71.12" width="0.1524" layer="91"/>
+<pinref part="D14" gate="G$1" pin="K"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
 <pinref part="D9" gate="G$1" pin="K"/>
 <wire x1="0" y1="-55.88" x2="0" y2="-58.42" width="0.1524" layer="91"/>
-<junction x="0" y="-58.42"/>
-<pinref part="D13" gate="G$1" pin="A"/>
-<wire x1="-12.7" y1="-17.78" x2="-12.7" y2="-58.42" width="0.1524" layer="91"/>
-<junction x="-12.7" y="-58.42"/>
-<label x="2.54" y="-58.42" size="1.778" layer="95"/>
+<pinref part="D14" gate="G$1" pin="A"/>
 </segment>
 </net>
 </nets>
