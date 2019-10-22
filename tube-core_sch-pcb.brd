@@ -3,14 +3,14 @@
 <eagle version="9.3.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.25" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
+<grid distance="0.125" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
-<layer number="3" name="Route3" color="17" fill="1" visible="no" active="yes"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
 <layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
 <layer number="6" name="Route6" color="25" fill="1" visible="no" active="no"/>
@@ -155,10 +155,26 @@
 <hole x="0" y="9.5" drill="2.2"/>
 <hole x="0" y="-19" drill="2.2"/>
 <hole x="0" y="23.75" drill="2.2"/>
-<wire x1="-1.9" y1="32" x2="-1.9" y2="-32" width="0" layer="20"/>
-<wire x1="-1.9" y1="-32" x2="1.9" y2="-32" width="0" layer="20"/>
-<wire x1="1.9" y1="-32" x2="1.9" y2="32" width="0" layer="20"/>
-<wire x1="1.9" y1="32" x2="-1.9" y2="32" width="0" layer="20"/>
+<wire x1="-2" y1="32" x2="-2" y2="-32" width="0" layer="20"/>
+<wire x1="-2" y1="-32" x2="2" y2="-32" width="0" layer="20"/>
+<wire x1="2" y1="-32" x2="2" y2="32" width="0" layer="20"/>
+<wire x1="2" y1="32" x2="-2" y2="32" width="0" layer="20"/>
+<polygon width="0.15" layer="30">
+<vertex x="2" y="7.5"/>
+<vertex x="-0.5" y="7.5"/>
+<vertex x="-0.5" y="9.25"/>
+<vertex x="0" y="9.75"/>
+<vertex x="0" y="30.5"/>
+<vertex x="2" y="30.5"/>
+</polygon>
+<polygon width="0.15" layer="30">
+<vertex x="-2" y="-7.5"/>
+<vertex x="0" y="-7.5"/>
+<vertex x="0" y="-30.5"/>
+<vertex x="-2" y="-30.5"/>
+</polygon>
+<rectangle x1="-2" y1="-32" x2="2" y2="-7.5" layer="48"/>
+<rectangle x1="-2" y1="7.5" x2="2" y2="32" layer="48"/>
 </plain>
 <libraries>
 <library name="OPTO">
@@ -176,36 +192,15 @@
 </library>
 <library name="DIODES">
 <packages>
-<package name="SOD-323">
-<smd name="A" x="-1.25" y="0" dx="1" dy="1.25" layer="1" rot="R180"/>
-<smd name="K" x="1.25" y="0" dx="1" dy="1.25" layer="1" rot="R180"/>
-<wire x1="-2" y1="-1" x2="2" y2="-1" width="0.15" layer="21"/>
-<wire x1="2" y1="-1" x2="2" y2="1" width="0.15" layer="21"/>
-<wire x1="2" y1="1" x2="1.75" y2="1" width="0.15" layer="21"/>
-<wire x1="1.75" y1="1" x2="-2" y2="1" width="0.15" layer="21"/>
-<wire x1="-2" y1="1" x2="-2" y2="-1" width="0.15" layer="21"/>
-<text x="-2" y="1.125" size="1" layer="21">&gt;NAME</text>
-<wire x1="2" y1="1" x2="2.125" y2="1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="1" x2="2.25" y2="1" width="0.15" layer="21"/>
-<wire x1="2.25" y1="1" x2="2.375" y2="1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="1" x2="2.5" y2="1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="1" x2="2.5" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="-1" x2="2.375" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="-1" x2="2.125" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="-1" x2="2" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="-1" x2="2.5" y2="1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="1" x2="2.375" y2="1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="1" x2="2.25" y2="1" width="0.15" layer="21"/>
-<wire x1="2.25" y1="1" x2="2.125" y2="1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="1" x2="2" y2="1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="1" x2="2.125" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="-1" x2="2.375" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="-1" x2="2.5" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="-1" x2="2.5" y2="1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="-1" x2="2.25" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.25" y1="-1" x2="2.25" y2="1" width="0.15" layer="21"/>
-<wire x1="2.25" y1="1" x2="2.375" y2="1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="1" x2="2.375" y2="-1" width="0.15" layer="21"/>
+<package name="SOT23-3">
+<smd name="1" x="-1" y="-1" dx="0.8" dy="1" layer="1"/>
+<smd name="3" x="1" y="-1" dx="0.8" dy="1" layer="1"/>
+<smd name="2" x="0" y="1" dx="0.8" dy="1" layer="1"/>
+<text x="-1.75" y="1.875" size="1" layer="25">&gt;NAME</text>
+<wire x1="-1.75" y1="1.75" x2="1.75" y2="1.75" width="0.122" layer="21"/>
+<wire x1="1.75" y1="1.75" x2="1.75" y2="-1.75" width="0.122" layer="21"/>
+<wire x1="1.75" y1="-1.75" x2="-1.75" y2="-1.75" width="0.122" layer="21"/>
+<wire x1="-1.75" y1="-1.75" x2="-1.75" y2="1.75" width="0.122" layer="21"/>
 </package>
 </packages>
 </library>
@@ -218,7 +213,7 @@
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="myDRC 4 layers 0.15mm *">
+<designrules name="tube-core_drc *">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -226,12 +221,12 @@ die meisten Anwendungen passen. Sollte ihre Platine
 besondere Anforderungen haben, treffen Sie die erforderlichen
 Einstellungen hier und speichern die Design Rules unter 
 einem neuen Namen ab.</description>
-<description language="en">&lt;b&gt;myDRC 4 layers&lt;/b&gt;
+<description language="en">&lt;b&gt;DRC for the LightTube core&lt;/b&gt;
 &lt;p&gt;
 </description>
-<param name="layerSetup" value="(1*2*3*16)"/>
+<param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
-<param name="mtIsolate" value="0.31mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="mtIsolate" value="0.73mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
 <param name="mdWireWire" value="0.15mm"/>
 <param name="mdWirePad" value="0.15mm"/>
 <param name="mdWireVia" value="0.15mm"/>
@@ -244,7 +239,7 @@ einem neuen Namen ab.</description>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
 <param name="mdCopperDimension" value="0.25mm"/>
-<param name="mdDrill" value="0.25mm"/>
+<param name="mdDrill" value="0.2mm"/>
 <param name="mdSmdStop" value="0mil"/>
 <param name="msWidth" value="0.15mm"/>
 <param name="msDrill" value="0.25mm"/>
@@ -443,62 +438,78 @@ einem neuen Namen ab.</description>
 <attribute name="HEIGHT" value="0.7" x="0" y="-23.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PRICE_PER" value="0.08" x="0" y="-23.75" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="D10" library="DIODES" package="SOD-323" value="PMEG4010BEA" x="-1" y="-1.25" smashed="yes" rot="MR90">
-<attribute name="DIGIKEY" value="1727-5211-1-ND" x="-1" y="-1.25" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="HEIGHT" value="1.2" x="-1" y="-1.25" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="PRICE_PER" value="0.29" x="-1" y="-1.25" size="1.778" layer="28" rot="MR90" display="off"/>
-</element>
-<element name="D11" library="DIODES" package="SOD-323" value="PMEG4010BEA" x="-1" y="3.75" smashed="yes" rot="MR270">
-<attribute name="DIGIKEY" value="1727-5211-1-ND" x="-1" y="3.75" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="HEIGHT" value="1.2" x="-1" y="3.75" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="PRICE_PER" value="0.29" x="-1" y="3.75" size="1.778" layer="28" rot="MR270" display="off"/>
-</element>
-<element name="D12" library="DIODES" package="SOD-323" value="PMEG4010BEA" x="1" y="-3.75" smashed="yes" rot="MR270">
-<attribute name="DIGIKEY" value="1727-5211-1-ND" x="1" y="-3.75" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="HEIGHT" value="1.2" x="1" y="-3.75" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="PRICE_PER" value="0.29" x="1" y="-3.75" size="1.778" layer="28" rot="MR270" display="off"/>
-</element>
-<element name="D13" library="DIODES" package="SOD-323" value="PMEG4010BEA" x="1" y="1.25" smashed="yes" rot="MR90">
-<attribute name="DIGIKEY" value="1727-5211-1-ND" x="1" y="1.25" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="HEIGHT" value="1.2" x="1" y="1.25" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="PRICE_PER" value="0.29" x="1" y="1.25" size="1.778" layer="28" rot="MR90" display="off"/>
-</element>
 <element name="D14" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="-28.5" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="-28.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="HEIGHT" value="0.7" x="0" y="-28.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PRICE_PER" value="0.08" x="0" y="-28.5" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="D15" library="DIODES" package="SOT23-3" value="BAV99" x="0" y="1.75" smashed="yes" rot="MR0">
+<attribute name="NAME" x="1.75" y="3.625" size="1" layer="26" rot="MR0"/>
+</element>
+<element name="D16" library="DIODES" package="SOT23-3" value="BAV99" x="0" y="-5.25" smashed="yes" rot="MR0">
+<attribute name="NAME" x="-1.75" y="-7.125" size="1" layer="26" rot="MR180"/>
 </element>
 </elements>
 <signals>
 <signal name="N$1">
 <contactref element="D1" pad="K"/>
 <contactref element="D2" pad="A"/>
-<wire x1="0" y1="20.225" x2="0" y2="27.775" width="0" layer="19" extent="1-1"/>
+<polygon width="0.15" layer="1">
+<vertex x="2" y="19.75"/>
+<vertex x="2" y="28.75"/>
+<vertex x="-2" y="28.75"/>
+<vertex x="-2" y="19.75"/>
+</polygon>
 </signal>
 <signal name="N$2">
 <contactref element="D2" pad="K"/>
 <contactref element="D3" pad="A"/>
-<wire x1="0" y1="15.475" x2="0" y2="18.275" width="0" layer="19" extent="1-1"/>
+<polygon width="0.15" layer="1">
+<vertex x="2" y="15"/>
+<vertex x="2" y="19.25"/>
+<vertex x="-2" y="19.25"/>
+<vertex x="-2" y="15"/>
+</polygon>
 </signal>
 <signal name="N$3">
 <contactref element="D3" pad="K"/>
 <contactref element="D4" pad="A"/>
-<wire x1="0" y1="5.975" x2="0" y2="13.525" width="0" layer="19" extent="1-1"/>
+<polygon width="0.15" layer="1">
+<vertex x="2" y="5.5"/>
+<vertex x="2" y="14.5"/>
+<vertex x="-2" y="14.5"/>
+<vertex x="-2" y="5.5"/>
+</polygon>
 </signal>
 <signal name="N$4">
 <contactref element="D5" pad="K"/>
 <contactref element="D6" pad="A"/>
-<wire x1="0" y1="-0.725" x2="0" y2="-3.525" width="0" layer="19" extent="1-1"/>
+<polygon width="0.15" layer="1">
+<vertex x="2" y="-4"/>
+<vertex x="2" y="0.25"/>
+<vertex x="-2" y="0.25"/>
+<vertex x="-2" y="-4"/>
+</polygon>
 </signal>
 <signal name="N$5">
 <contactref element="D6" pad="K"/>
 <contactref element="D7" pad="A"/>
-<wire x1="0" y1="-5.475" x2="0" y2="-8.275" width="0" layer="19" extent="1-1"/>
+<polygon width="0.15" layer="1">
+<vertex x="2" y="-8.75"/>
+<vertex x="2" y="-4.5"/>
+<vertex x="-2" y="-4.5"/>
+<vertex x="-2" y="-8.75"/>
+</polygon>
 </signal>
 <signal name="N$6">
 <contactref element="D7" pad="K"/>
 <contactref element="D8" pad="A"/>
-<wire x1="0" y1="-10.225" x2="0" y2="-13.025" width="0" layer="19" extent="1-1"/>
+<polygon width="0.15" layer="1">
+<vertex x="2" y="-13.5"/>
+<vertex x="2" y="-9.25"/>
+<vertex x="-2" y="-9.25"/>
+<vertex x="-2" y="-13.5"/>
+</polygon>
 </signal>
 <signal name="N$18">
 <contactref element="D8" pad="K"/>
@@ -509,52 +520,103 @@ einem neuen Namen ab.</description>
 <vertex x="-2" y="-14"/>
 <vertex x="-2" y="-23"/>
 </polygon>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="-27.75"/>
-<vertex x="2" y="-18.75"/>
-<vertex x="-2" y="-18.75"/>
-<vertex x="-2" y="-27.75"/>
-</polygon>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="-32.5"/>
-<vertex x="2" y="-23.5"/>
-<vertex x="-2" y="-23.5"/>
-<vertex x="-2" y="-32.5"/>
-</polygon>
 </signal>
 <signal name="N$19">
 <contactref element="D4" pad="K"/>
 <contactref element="D5" pad="A"/>
-<wire x1="0" y1="1.225" x2="0" y2="4.025" width="0" layer="19" extent="1-1"/>
+<polygon width="0.15" layer="1">
+<vertex x="2" y="0.75"/>
+<vertex x="2" y="5"/>
+<vertex x="-2" y="5"/>
+<vertex x="-2" y="0.75"/>
+</polygon>
 </signal>
 <signal name="CATHODE">
-<contactref element="D12" pad="A"/>
-<contactref element="D13" pad="A"/>
 <contactref element="D14" pad="K"/>
-<wire x1="1" y1="-2.5" x2="0" y2="-29.225" width="0" layer="19" extent="1-16"/>
-<wire x1="1" y1="0" x2="1" y2="-2.5" width="0" layer="19" extent="16-16"/>
+<via x="0" y="-31.5" extent="1-16" drill="0.3"/>
+<polygon width="0.15" layer="1">
+<vertex x="2" y="-32"/>
+<vertex x="2" y="-23.5"/>
+<vertex x="-2" y="-23.5"/>
+<vertex x="-2" y="-32"/>
+</polygon>
+<via x="-0.5" y="-31.5" extent="1-16" drill="0.3"/>
+<via x="-1" y="-31.5" extent="1-16" drill="0.3"/>
+<via x="-1" y="-31" extent="1-16" drill="0.3"/>
+<via x="-0.5" y="-31" extent="1-16" drill="0.3"/>
+<via x="0" y="-31" extent="1-16" drill="0.3"/>
+<via x="0.5" y="-31" extent="1-16" drill="0.3"/>
+<via x="1" y="-31" extent="1-16" drill="0.3"/>
+<via x="1" y="-31.5" extent="1-16" drill="0.3"/>
+<via x="0.5" y="-31.5" extent="1-16" drill="0.3"/>
+<contactref element="D15" pad="1"/>
+<contactref element="D16" pad="1"/>
+<polygon width="0.15" layer="16" thermals="no" rank="3">
+<vertex x="-2" y="-32"/>
+<vertex x="2" y="-32"/>
+<vertex x="2" y="1.75"/>
+<vertex x="0.25" y="1.75"/>
+<vertex x="0.25" y="-30.75"/>
+<vertex x="-2" y="-30.75"/>
+</polygon>
 </signal>
 <signal name="ANODE">
-<contactref element="D10" pad="K"/>
 <contactref element="D1" pad="A"/>
-<contactref element="D11" pad="K"/>
-<wire x1="-1" y1="2.5" x2="0" y2="29.725" width="0" layer="19" extent="1-16"/>
-<wire x1="-1" y1="0" x2="-1" y2="2.5" width="0" layer="19" extent="16-16"/>
-</signal>
-<signal name="IN1">
-<contactref element="D11" pad="A"/>
-<contactref element="D13" pad="K"/>
-<wire x1="-1" y1="5" x2="1" y2="2.5" width="0" layer="19" extent="16-16"/>
-</signal>
-<signal name="IN2">
-<contactref element="D10" pad="A"/>
-<contactref element="D12" pad="K"/>
-<wire x1="-1" y1="-2.5" x2="1" y2="-5" width="0" layer="19" extent="16-16"/>
+<polygon width="0.15" layer="1">
+<vertex x="2" y="29.25"/>
+<vertex x="2" y="32"/>
+<vertex x="-2" y="32"/>
+<vertex x="-2" y="29.25"/>
+</polygon>
+<via x="0" y="31.5" extent="1-16" drill="0.3"/>
+<via x="-0.5" y="31.5" extent="1-16" drill="0.3"/>
+<via x="-1" y="31.5" extent="1-16" drill="0.3"/>
+<via x="-1" y="31" extent="1-16" drill="0.3"/>
+<via x="-0.5" y="31" extent="1-16" drill="0.3"/>
+<via x="0" y="31" extent="1-16" drill="0.3"/>
+<via x="0.5" y="31" extent="1-16" drill="0.3"/>
+<via x="1" y="31" extent="1-16" drill="0.3"/>
+<via x="1" y="31.5" extent="1-16" drill="0.3"/>
+<via x="0.5" y="31.5" extent="1-16" drill="0.3"/>
+<contactref element="D15" pad="3"/>
+<contactref element="D16" pad="3"/>
+<polygon width="0.15" layer="16" thermals="no" rank="3">
+<vertex x="2" y="32"/>
+<vertex x="-2" y="32"/>
+<vertex x="-2" y="-7"/>
+<vertex x="-0.25" y="-7"/>
+<vertex x="-0.25" y="30.75"/>
+<vertex x="2" y="30.75"/>
+</polygon>
 </signal>
 <signal name="N$7">
 <contactref element="D9" pad="K"/>
 <contactref element="D14" pad="A"/>
 <wire x1="0" y1="-24.475" x2="0" y2="-27.275" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="IN1">
+<contactref element="D15" pad="2"/>
+<polygon width="0.15" layer="16" thermals="no">
+<vertex x="2" y="1.75"/>
+<vertex x="-0.5" y="1.75"/>
+<vertex x="-0.5" y="9.25"/>
+<vertex x="0" y="9.75"/>
+<vertex x="0" y="30.5"/>
+<vertex x="2" y="30.5"/>
+</polygon>
+</signal>
+<signal name="IN2">
+<contactref element="D16" pad="2"/>
+<polygon width="0.15" layer="16" thermals="no">
+<vertex x="-0.5" y="-3.5"/>
+<vertex x="0.5" y="-3.5"/>
+<vertex x="0.5" y="-7.875"/>
+<vertex x="0" y="-8.375"/>
+<vertex x="0" y="-30.5"/>
+<vertex x="-2" y="-30.5"/>
+<vertex x="-2" y="-7"/>
+<vertex x="-0.5" y="-7"/>
+</polygon>
 </signal>
 </signals>
 <mfgpreviewcolors>

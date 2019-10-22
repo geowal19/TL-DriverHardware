@@ -212,73 +212,55 @@
 </library>
 <library name="DIODES">
 <packages>
-<package name="SOD-323">
-<smd name="A" x="-1.25" y="0" dx="1" dy="1.25" layer="1" rot="R180"/>
-<smd name="K" x="1.25" y="0" dx="1" dy="1.25" layer="1" rot="R180"/>
-<wire x1="-2" y1="-1" x2="2" y2="-1" width="0.15" layer="21"/>
-<wire x1="2" y1="-1" x2="2" y2="1" width="0.15" layer="21"/>
-<wire x1="2" y1="1" x2="1.75" y2="1" width="0.15" layer="21"/>
-<wire x1="1.75" y1="1" x2="-2" y2="1" width="0.15" layer="21"/>
-<wire x1="-2" y1="1" x2="-2" y2="-1" width="0.15" layer="21"/>
-<text x="-2" y="1.125" size="1" layer="21">&gt;NAME</text>
-<wire x1="2" y1="1" x2="2.125" y2="1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="1" x2="2.25" y2="1" width="0.15" layer="21"/>
-<wire x1="2.25" y1="1" x2="2.375" y2="1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="1" x2="2.5" y2="1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="1" x2="2.5" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="-1" x2="2.375" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="-1" x2="2.125" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="-1" x2="2" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="-1" x2="2.5" y2="1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="1" x2="2.375" y2="1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="1" x2="2.25" y2="1" width="0.15" layer="21"/>
-<wire x1="2.25" y1="1" x2="2.125" y2="1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="1" x2="2" y2="1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="1" x2="2.125" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="-1" x2="2.375" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="-1" x2="2.5" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.5" y1="-1" x2="2.5" y2="1" width="0.15" layer="21"/>
-<wire x1="2.125" y1="-1" x2="2.25" y2="-1" width="0.15" layer="21"/>
-<wire x1="2.25" y1="-1" x2="2.25" y2="1" width="0.15" layer="21"/>
-<wire x1="2.25" y1="1" x2="2.375" y2="1" width="0.15" layer="21"/>
-<wire x1="2.375" y1="1" x2="2.375" y2="-1" width="0.15" layer="21"/>
+<package name="SOT23-3">
+<smd name="1" x="-1" y="-1" dx="0.8" dy="1" layer="1"/>
+<smd name="3" x="1" y="-1" dx="0.8" dy="1" layer="1"/>
+<smd name="2" x="0" y="1" dx="0.8" dy="1" layer="1"/>
+<text x="-1.75" y="1.875" size="1" layer="25">&gt;NAME</text>
+<wire x1="-1.75" y1="1.75" x2="1.75" y2="1.75" width="0.122" layer="21"/>
+<wire x1="1.75" y1="1.75" x2="1.75" y2="-1.75" width="0.122" layer="21"/>
+<wire x1="1.75" y1="-1.75" x2="-1.75" y2="-1.75" width="0.122" layer="21"/>
+<wire x1="-1.75" y1="-1.75" x2="-1.75" y2="1.75" width="0.122" layer="21"/>
 </package>
 </packages>
 <symbols>
-<symbol name="DIODE">
-<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<text x="0" y="2.54" size="1.27" layer="95" align="center">&gt;NAME</text>
-<text x="0" y="-2.54" size="1.27" layer="96" align="center">&gt;VALUE</text>
-<pin name="A" x="-5.08" y="0" visible="pad" length="short"/>
-<pin name="K" x="5.08" y="0" visible="pad" length="short" rot="R180"/>
-<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<symbol name="DUAL">
+<wire x1="1.27" y1="1.27" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="3.81" x2="0" y2="3.81" width="0.254" layer="94"/>
+<text x="2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="K" x="0" y="7.62" visible="pad" length="short" rot="R270"/>
+<wire x1="0" y1="3.81" x2="1.27" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="0" y2="3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="3.81" x2="1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="3.81" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-3.81" x2="0" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="-3.81" x2="-1.27" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<pin name="A" x="0" y="-7.62" visible="pad" length="short" rot="R90"/>
+<pin name="AK" x="-5.08" y="0" visible="pad" length="middle"/>
+<wire x1="0" y1="-1.27" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-3.81" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="1.27" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-3.81" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.1524" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="PMEG4010BEA" prefix="D">
-<description>1A, 40V Schottkey rectifier. SOD323.</description>
+<deviceset name="BAV99" prefix="D">
 <gates>
-<gate name="G$1" symbol="DIODE" x="0" y="0"/>
+<gate name="G$1" symbol="DUAL" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="SOD-323">
+<device name="" package="SOT23-3">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="K" pad="K"/>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="AK" pad="2"/>
+<connect gate="G$1" pin="K" pad="3"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="DIGIKEY" value="1727-5211-1-ND" constant="no"/>
-<attribute name="HEIGHT" value="1.2" constant="no"/>
-<attribute name="PRICE_PER" value="0.29" constant="no"/>
-<attribute name="VALUE" value="PMEG4010BEA" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -304,11 +286,9 @@
 <part name="D7" library="OPTO" deviceset="JE2835AWT-00-0000-0B0A0UF735E" device="" value="3500K"/>
 <part name="D8" library="OPTO" deviceset="JE2835AWT-00-0000-0B0A0UF735E" device="" value="3500K"/>
 <part name="D9" library="OPTO" deviceset="JE2835AWT-00-0000-0B0A0UF735E" device="" value="3500K"/>
-<part name="D10" library="DIODES" deviceset="PMEG4010BEA" device="" value="PMEG4010BEA"/>
-<part name="D11" library="DIODES" deviceset="PMEG4010BEA" device="" value="PMEG4010BEA"/>
-<part name="D12" library="DIODES" deviceset="PMEG4010BEA" device="" value="PMEG4010BEA"/>
-<part name="D13" library="DIODES" deviceset="PMEG4010BEA" device="" value="PMEG4010BEA"/>
 <part name="D14" library="OPTO" deviceset="JE2835AWT-00-0000-0B0A0UF735E" device="" value="3500K"/>
+<part name="D15" library="DIODES" deviceset="BAV99" device=""/>
+<part name="D16" library="DIODES" deviceset="BAV99" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -352,25 +332,17 @@
 <attribute name="NAME" x="-2.54" y="-50.8" size="1.27" layer="95" rot="R270" align="center"/>
 <attribute name="VALUE" x="-5.08" y="-50.8" size="1.27" layer="96" rot="R270" align="center"/>
 </instance>
-<instance part="D10" gate="G$1" x="-25.4" y="12.7" smashed="yes" rot="R90">
-<attribute name="NAME" x="-27.94" y="12.7" size="1.27" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="-22.86" y="12.7" size="1.27" layer="96" rot="R90" align="center"/>
-</instance>
-<instance part="D11" gate="G$1" x="-12.7" y="12.7" smashed="yes" rot="R90">
-<attribute name="NAME" x="-15.24" y="12.7" size="1.27" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="-10.16" y="12.7" size="1.27" layer="96" rot="R90" align="center"/>
-</instance>
-<instance part="D12" gate="G$1" x="-25.4" y="-12.7" smashed="yes" rot="R90">
-<attribute name="NAME" x="-27.94" y="-12.7" size="1.27" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="-22.86" y="-12.7" size="1.27" layer="96" rot="R90" align="center"/>
-</instance>
-<instance part="D13" gate="G$1" x="-12.7" y="-12.7" smashed="yes" rot="R90">
-<attribute name="NAME" x="-15.24" y="-12.7" size="1.27" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="-10.16" y="-12.7" size="1.27" layer="96" rot="R90" align="center"/>
-</instance>
 <instance part="D14" gate="G$1" x="0" y="-63.5" smashed="yes" rot="R270">
 <attribute name="NAME" x="-2.54" y="-63.5" size="1.27" layer="95" rot="R270" align="center"/>
 <attribute name="VALUE" x="-5.08" y="-63.5" size="1.27" layer="96" rot="R270" align="center"/>
+</instance>
+<instance part="D15" gate="G$1" x="-35.56" y="7.62" smashed="yes">
+<attribute name="NAME" x="-33.02" y="10.16" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-33.02" y="7.62" size="1.778" layer="96"/>
+</instance>
+<instance part="D16" gate="G$1" x="-22.86" y="-5.08" smashed="yes">
+<attribute name="NAME" x="-20.32" y="-2.54" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-20.32" y="-5.08" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -434,56 +406,48 @@
 </net>
 <net name="IN1" class="0">
 <segment>
-<pinref part="D11" gate="G$1" pin="A"/>
-<pinref part="D13" gate="G$1" pin="K"/>
-<wire x1="-12.7" y1="7.62" x2="-12.7" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="2.54" x2="-12.7" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="2.54" x2="-60.96" y2="2.54" width="0.1524" layer="91"/>
-<junction x="-12.7" y="2.54"/>
-<label x="-58.42" y="2.54" size="1.778" layer="95"/>
+<label x="-68.58" y="7.62" size="1.778" layer="95"/>
+<wire x1="-40.64" y1="7.62" x2="-71.12" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="D15" gate="G$1" pin="AK"/>
 </segment>
 </net>
 <net name="IN2" class="0">
 <segment>
-<pinref part="D10" gate="G$1" pin="A"/>
-<pinref part="D12" gate="G$1" pin="K"/>
-<wire x1="-25.4" y1="7.62" x2="-25.4" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="-2.54" x2="-25.4" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="-2.54" x2="-60.96" y2="-2.54" width="0.1524" layer="91"/>
-<junction x="-25.4" y="-2.54"/>
-<label x="-58.42" y="-2.54" size="1.778" layer="95"/>
+<label x="-68.58" y="-5.08" size="1.778" layer="95"/>
+<pinref part="D16" gate="G$1" pin="AK"/>
+<wire x1="-71.12" y1="-5.08" x2="-27.94" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ANODE" class="0">
 <segment>
-<pinref part="D10" gate="G$1" pin="K"/>
-<wire x1="-25.4" y1="17.78" x2="-25.4" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="58.42" x2="-12.7" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="15.24" x2="-35.56" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="58.42" x2="-22.86" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="-12.7" y1="58.42" x2="0" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="58.42" x2="0" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="0" y1="58.42" x2="0" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="D11" gate="G$1" pin="K"/>
-<wire x1="-12.7" y1="17.78" x2="-12.7" y2="58.42" width="0.1524" layer="91"/>
-<junction x="-12.7" y="58.42"/>
+<wire x1="-22.86" y1="2.54" x2="-22.86" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-22.86" y="58.42"/>
 <label x="2.54" y="58.42" size="1.778" layer="95"/>
 <wire x1="0" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
 <junction x="0" y="58.42"/>
+<pinref part="D15" gate="G$1" pin="K"/>
+<pinref part="D16" gate="G$1" pin="K"/>
 </segment>
 </net>
 <net name="CATHODE" class="0">
 <segment>
-<pinref part="D12" gate="G$1" pin="A"/>
-<wire x1="-25.4" y1="-17.78" x2="-25.4" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="-71.12" x2="-12.7" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="-71.12" x2="0" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="0" x2="-35.56" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="-71.12" x2="-22.86" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-71.12" x2="0" y2="-71.12" width="0.1524" layer="91"/>
 <wire x1="0" y1="-71.12" x2="22.86" y2="-71.12" width="0.1524" layer="91"/>
 <junction x="0" y="-71.12"/>
-<pinref part="D13" gate="G$1" pin="A"/>
-<wire x1="-12.7" y1="-17.78" x2="-12.7" y2="-71.12" width="0.1524" layer="91"/>
-<junction x="-12.7" y="-71.12"/>
+<wire x1="-22.86" y1="-12.7" x2="-22.86" y2="-71.12" width="0.1524" layer="91"/>
+<junction x="-22.86" y="-71.12"/>
 <label x="2.54" y="-71.12" size="1.778" layer="95"/>
 <wire x1="0" y1="-68.58" x2="0" y2="-71.12" width="0.1524" layer="91"/>
 <pinref part="D14" gate="G$1" pin="K"/>
+<pinref part="D15" gate="G$1" pin="A"/>
+<pinref part="D16" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="N$7" class="0">
