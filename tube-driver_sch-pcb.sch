@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -3017,14 +3017,6 @@
 <pinref part="U5" gate="G$1" pin="IO5"/>
 <wire x1="375.92" y1="111.76" x2="411.48" y2="111.76" width="0.1524" layer="91"/>
 <label x="378.46" y="111.76" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="LED_PWM" class="0">
-<segment>
-<pinref part="U5" gate="G$1" pin="IO17"/>
-<wire x1="375.92" y1="91.44" x2="408.94" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="408.94" y1="91.44" x2="411.48" y2="91.44" width="0.1524" layer="91"/>
-<label x="378.46" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="STM_NRST" class="0">
