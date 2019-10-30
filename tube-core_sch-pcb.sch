@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -228,9 +228,9 @@
 <wire x1="1.27" y1="1.27" x2="0" y2="1.27" width="0.254" layer="94"/>
 <wire x1="0" y1="1.27" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="3.81" x2="0" y2="3.81" width="0.254" layer="94"/>
-<text x="2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="2.54" y="0" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="K" x="0" y="7.62" visible="pad" length="short" rot="R270"/>
+<text x="2.54" y="2.54" size="1.27" layer="95">&gt;NAME</text>
+<text x="2.54" y="0" size="1.27" layer="96">&gt;VALUE</text>
+<pin name="K" x="0" y="7.62" visible="off" length="short" rot="R270"/>
 <wire x1="0" y1="3.81" x2="1.27" y2="3.81" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="1.27" x2="0" y2="3.81" width="0.254" layer="94"/>
 <wire x1="0" y1="3.81" x2="1.27" y2="1.27" width="0.254" layer="94"/>
@@ -238,8 +238,8 @@
 <wire x1="1.27" y1="-3.81" x2="0" y2="-3.81" width="0.254" layer="94"/>
 <wire x1="0" y1="-3.81" x2="-1.27" y2="-3.81" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="-1.27" x2="0" y2="-1.27" width="0.254" layer="94"/>
-<pin name="A" x="0" y="-7.62" visible="pad" length="short" rot="R90"/>
-<pin name="AK" x="-5.08" y="0" visible="pad" length="middle"/>
+<pin name="A" x="0" y="-7.62" visible="off" length="short" rot="R90"/>
+<pin name="AK" x="-5.08" y="0" visible="off" length="middle"/>
 <wire x1="0" y1="-1.27" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="-3.81" x2="0" y2="-1.27" width="0.254" layer="94"/>
 <wire x1="0" y1="-1.27" x2="1.27" y2="-3.81" width="0.254" layer="94"/>
@@ -249,6 +249,7 @@
 </symbols>
 <devicesets>
 <deviceset name="BAV99" prefix="D">
+<description>Diode Array 1 Pair Series Connection Standard 75V 300mA (DC) Surface Mount TO-236-3, SC-59, SOT-23-3</description>
 <gates>
 <gate name="G$1" symbol="DUAL" x="0" y="0"/>
 </gates>
@@ -260,7 +261,12 @@
 <connect gate="G$1" pin="K" pad="3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DIGIKEY" value="BAV99Q-7-FDICT-ND" constant="no"/>
+<attribute name="HEIGHT" value="1.2" constant="no"/>
+<attribute name="PRICE_PER" value="0.15" constant="no"/>
+<attribute name="VALUE" value="BAV99" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -287,8 +293,8 @@
 <part name="D8" library="OPTO" deviceset="JE2835AWT-00-0000-0B0A0UF735E" device="" value="3500K"/>
 <part name="D9" library="OPTO" deviceset="JE2835AWT-00-0000-0B0A0UF735E" device="" value="3500K"/>
 <part name="D14" library="OPTO" deviceset="JE2835AWT-00-0000-0B0A0UF735E" device="" value="3500K"/>
-<part name="D15" library="DIODES" deviceset="BAV99" device=""/>
-<part name="D16" library="DIODES" deviceset="BAV99" device=""/>
+<part name="D15" library="DIODES" deviceset="BAV99" device="" value="BAV99"/>
+<part name="D16" library="DIODES" deviceset="BAV99" device="" value="BAV99"/>
 </parts>
 <sheets>
 <sheet>
