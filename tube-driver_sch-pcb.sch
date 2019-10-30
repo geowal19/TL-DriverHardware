@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -3349,12 +3349,22 @@
 <wire x1="218.44" y1="276.86" x2="248.92" y2="276.86" width="0.1524" layer="91"/>
 <label x="220.98" y="276.86" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="IO16"/>
+<wire x1="375.92" y1="93.98" x2="411.48" y2="93.98" width="0.1524" layer="91"/>
+<label x="378.46" y="93.98" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="ESP_UART_TX" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PA3"/>
 <wire x1="218.44" y1="274.32" x2="248.92" y2="274.32" width="0.1524" layer="91"/>
 <label x="220.98" y="274.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="IO17"/>
+<wire x1="375.92" y1="91.44" x2="411.48" y2="91.44" width="0.1524" layer="91"/>
+<label x="378.46" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED_PWM_2" class="0">
