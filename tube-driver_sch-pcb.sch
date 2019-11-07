@@ -776,8 +776,9 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="FARNELL" value="1269406" constant="no"/>
-<attribute name="PRICE_PER" value="0.2288" constant="no"/>
+<attribute name="DIGIKEY" value="497-5235-1-ND" constant="no"/>
+<attribute name="HEIGHT" value="1.5" constant="no"/>
+<attribute name="PRICE_PER" value="0.38" constant="no"/>
 <attribute name="VALUE" value="USBLC6-2SC6" constant="no"/>
 </technology>
 </technologies>
@@ -1139,27 +1140,6 @@
 <attribute name="HEIGHT" value="0.95" constant="no"/>
 <attribute name="PRICE_PER" value="0.17" constant="no"/>
 <attribute name="VALUE" value="10uF 10V" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VJ0603Y104KXACW1BC" prefix="C">
-<description>100nF 50V X7R 10% 0603 MLCC.</description>
-<gates>
-<gate name="G$1" symbol="CAPACITOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="FARNELL" value="2407338" constant="no"/>
-<attribute name="PRICE_PER" value="0.0085" constant="no"/>
-<attribute name="VALUE" value="100nF 50V" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1565,24 +1545,6 @@
 </library>
 <library name="CONNECTORs">
 <packages>
-<package name="MUSB-05-S-B-SM-A">
-<text x="-5.5" y="5.5" size="1" layer="25">&gt;NAME</text>
-<smd name="VCC" x="-1.6" y="2.8" dx="0.5" dy="2.25" layer="1"/>
-<smd name="D-" x="-0.8" y="2.8" dx="0.5" dy="2.25" layer="1"/>
-<smd name="D+" x="0" y="2.8" dx="0.5" dy="2.25" layer="1"/>
-<smd name="GND" x="1.6" y="2.8" dx="0.5" dy="2.25" layer="1"/>
-<smd name="SHIELD1" x="-4.5" y="2.5" dx="2" dy="2.5" layer="1"/>
-<smd name="SHIELD2" x="4.5" y="2.5" dx="2" dy="2.5" layer="1"/>
-<smd name="SHIELD4" x="-4.5" y="-2.75" dx="2" dy="2.5" layer="1"/>
-<smd name="SHIELD3" x="4.5" y="-2.75" dx="2" dy="2.5" layer="1"/>
-<hole x="2.25" y="0" drill="1.1"/>
-<hole x="-2.25" y="0" drill="1.1"/>
-<wire x1="-5.5" y1="-5.75" x2="5.5" y2="-5.75" width="0.25" layer="21"/>
-<wire x1="5.5" y1="-5.75" x2="5.5" y2="5.25" width="0.25" layer="21"/>
-<wire x1="5.5" y1="5.25" x2="-5.5" y2="5.25" width="0.25" layer="21"/>
-<wire x1="-5.5" y1="5.25" x2="-5.5" y2="-5.75" width="0.25" layer="21"/>
-<smd name="ID" x="0.8" y="2.8" dx="0.5" dy="2.25" layer="1"/>
-</package>
 <package name="KEYSTONE_54">
 <pad name="P$1" x="-2.54" y="0" drill="1.8"/>
 <pad name="P$2" x="2.54" y="0" drill="1.8"/>
@@ -1609,21 +1571,26 @@
 <smd name="6" x="-2.54" y="2" dx="3" dy="1" layer="1" rot="R90"/>
 <text x="-3.75" y="4" size="1" layer="21">&gt;NAME</text>
 </package>
+<package name="MUSB-05-S-B-SM-A">
+<text x="-5.5" y="5.5" size="1" layer="25">&gt;NAME</text>
+<smd name="VCC" x="-1.6" y="2.8" dx="0.5" dy="2.25" layer="1"/>
+<smd name="D-" x="-0.8" y="2.8" dx="0.5" dy="2.25" layer="1"/>
+<smd name="D+" x="0" y="2.8" dx="0.5" dy="2.25" layer="1"/>
+<smd name="GND" x="1.6" y="2.8" dx="0.5" dy="2.25" layer="1"/>
+<smd name="SHIELD1" x="-4.5" y="2.5" dx="2" dy="2.5" layer="1"/>
+<smd name="SHIELD2" x="4.5" y="2.5" dx="2" dy="2.5" layer="1"/>
+<smd name="SHIELD4" x="-4.5" y="-2.75" dx="2" dy="2.5" layer="1"/>
+<smd name="SHIELD3" x="4.5" y="-2.75" dx="2" dy="2.5" layer="1"/>
+<hole x="2.25" y="0" drill="1.1"/>
+<hole x="-2.25" y="0" drill="1.1"/>
+<wire x1="-5.75" y1="-5.75" x2="5.75" y2="-5.75" width="0.15" layer="21"/>
+<wire x1="5.75" y1="-5.75" x2="5.75" y2="5.25" width="0.15" layer="21"/>
+<wire x1="5.75" y1="5.25" x2="-5.75" y2="5.25" width="0.15" layer="21"/>
+<wire x1="-5.75" y1="5.25" x2="-5.75" y2="-5.75" width="0.15" layer="21"/>
+<smd name="ID" x="0.8" y="2.8" dx="0.5" dy="2.25" layer="1"/>
+</package>
 </packages>
 <symbols>
-<symbol name="USB_CONNECTOR">
-<text x="-5.08" y="10.16" size="2.286" layer="95">&gt;NAME</text>
-<text x="-5.08" y="7.62" size="2.286" layer="96">&gt;VALUE</text>
-<pin name="5V" x="7.62" y="2.54" visible="pin" length="short" rot="R180"/>
-<wire x1="-7.62" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
-<pin name="D+" x="7.62" y="0" visible="pin" length="short" rot="R180"/>
-<pin name="D-" x="7.62" y="-2.54" visible="pin" length="short" rot="R180"/>
-<pin name="GND" x="7.62" y="-5.08" visible="pin" length="short" rot="R180"/>
-<pin name="SHIELD" x="-5.08" y="-10.16" visible="pin" length="short" rot="R90"/>
-</symbol>
 <symbol name="PIN">
 <pin name="P$1" x="-5.08" y="0" visible="off" length="short"/>
 <wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.254" layer="94"/>
@@ -1647,30 +1614,21 @@
 <pin name="6" x="10.16" y="2.54" visible="pin" length="middle" rot="R180"/>
 <wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
 </symbol>
+<symbol name="USB_ID">
+<text x="-7.62" y="12.7" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="5V" x="10.16" y="5.08" visible="pin" length="short" rot="R180"/>
+<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<pin name="D+" x="10.16" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="D-" x="10.16" y="0" visible="pin" length="short" rot="R180"/>
+<pin name="GND" x="10.16" y="-5.08" visible="pin" length="short" rot="R180"/>
+<pin name="ID" x="10.16" y="-2.54" visible="pin" length="short" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="MUSB-05-S-B-SM-A" prefix="CN">
-<description>5 pin, SMD, mini USB connector.</description>
-<gates>
-<gate name="G$1" symbol="USB_CONNECTOR" x="2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="MUSB-05-S-B-SM-A">
-<connects>
-<connect gate="G$1" pin="5V" pad="VCC"/>
-<connect gate="G$1" pin="D+" pad="D+"/>
-<connect gate="G$1" pin="D-" pad="D-"/>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="SHIELD" pad="SHIELD1 SHIELD2 SHIELD3 SHIELD4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="FARNELL" value="1753806" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="KEYSTONE_54" prefix="CN">
 <description>Battery Contact Clip 18650 1 Cell PC Pin</description>
 <gates>
@@ -1713,6 +1671,31 @@
 <attribute name="HEIGHT" value="14" constant="no"/>
 <attribute name="PRICE_PER" value="0.31" constant="no"/>
 <attribute name="VALUE" value="2X6" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MUSB-05-S-B-SM-A" prefix="CN">
+<description>5 pin, SMD, mini USB connector.</description>
+<gates>
+<gate name="G$1" symbol="USB_ID" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MUSB-05-S-B-SM-A">
+<connects>
+<connect gate="G$1" pin="5V" pad="VCC"/>
+<connect gate="G$1" pin="D+" pad="D+"/>
+<connect gate="G$1" pin="D-" pad="D-"/>
+<connect gate="G$1" pin="GND" pad="GND SHIELD1 SHIELD2 SHIELD3 SHIELD4"/>
+<connect gate="G$1" pin="ID" pad="ID"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY" value="SAM8841-ND" constant="no"/>
+<attribute name="HEIGHT" value="4" constant="no"/>
+<attribute name="PRICE_PER" value="1.11" constant="no"/>
+<attribute name="VALUE" value="MINI B USB" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2080,17 +2063,10 @@
 <part name="U$10" library="NETS" deviceset="3V3" device=""/>
 <part name="R20" library="r_0603" deviceset="ERJ3EKF5101V" device="" value="5.1k"/>
 <part name="U$11" library="NETS" deviceset="3V3" device=""/>
-<part name="CN2" library="CONNECTORs" deviceset="MUSB-05-S-B-SM-A" device=""/>
-<part name="GND25" library="NETS" deviceset="GND" device=""/>
 <part name="GND26" library="NETS" deviceset="GND" device=""/>
 <part name="U6" library="ICs" deviceset="USBLC6-2SC6" device="" value="USBLC6-2SC6"/>
 <part name="GND27" library="NETS" deviceset="GND" device=""/>
 <part name="GND28" library="NETS" deviceset="GND" device=""/>
-<part name="C15" library="CAPACITORS" deviceset="VJ0603Y104KXACW1BC" device="" value="100nF 50V">
-<attribute name="FARNELL" value="2407338"/>
-<attribute name="PRICE_PER" value="0.0085"/>
-<attribute name="VALUE" value="100nF 50V"/>
-</part>
 <part name="C16" library="CAPACITORS" deviceset="GRM188R61E225KA12D" device="" value="2.2uF 25V">
 <attribute name="PRICE_PER" value="0.0832"/>
 <attribute name="VALUE" value="2.2uF 25V"/>
@@ -2098,9 +2074,6 @@
 <part name="GND29" library="NETS" deviceset="GND" device=""/>
 <part name="GND30" library="NETS" deviceset="GND" device=""/>
 <part name="U$12" library="NETS" deviceset="3V3" device=""/>
-<part name="C17" library="CAPACITORS" deviceset="VJ0603Y104KXACW1BC" device="" value="100nF 50V">
-<attribute name="VALUE" value="100nF 50V"/>
-</part>
 <part name="GND31" library="NETS" deviceset="GND" device=""/>
 <part name="U7" library="ICs" deviceset="FT231X" device="" value="FT231X"/>
 <part name="Q4" library="TRANSISTORs" deviceset="MMBT3904-7-F" device="" value="MMBT3904"/>
@@ -2319,6 +2292,9 @@
 <part name="R23" library="RESISTORS" deviceset="CRCW06030000Z0EA" device="" value="0R"/>
 <part name="R24" library="RESISTORS" deviceset="CRCW06030000Z0EA" device="" value="0R"/>
 <part name="R34" library="r_0603" deviceset="ERJ3EKF5101V" device="" value="5.1k"/>
+<part name="CN2" library="CONNECTORs" deviceset="MUSB-05-S-B-SM-A" device="" value="MINI B USB"/>
+<part name="C15" library="CAPACITORS" deviceset="CL10B104KO8WPNC" device="" value="100nF 16V"/>
+<part name="C17" library="CAPACITORS" deviceset="CL10B104KO8WPNC" device="" value="100nF 16V"/>
 </parts>
 <sheets>
 <sheet>
@@ -2377,13 +2353,6 @@
 <instance part="U$11" gate="G$1" x="378.46" y="142.24" smashed="yes">
 <attribute name="VALUE" x="378.46" y="144.78" size="1.778" layer="96" rot="R180" align="center"/>
 </instance>
-<instance part="CN2" gate="G$1" x="38.1" y="99.06" smashed="yes">
-<attribute name="NAME" x="43.18" y="111.76" size="2.286" layer="95" rot="R180"/>
-<attribute name="VALUE" x="43.18" y="109.22" size="2.286" layer="96" rot="R180"/>
-</instance>
-<instance part="GND25" gate="G$1" x="33.02" y="83.82" smashed="yes">
-<attribute name="VALUE" x="33.02" y="81.28" size="1.778" layer="96" align="center"/>
-</instance>
 <instance part="GND26" gate="G$1" x="48.26" y="83.82" smashed="yes">
 <attribute name="VALUE" x="48.26" y="81.28" size="1.778" layer="96" align="center"/>
 </instance>
@@ -2397,10 +2366,6 @@
 <instance part="GND28" gate="G$1" x="121.92" y="45.72" smashed="yes">
 <attribute name="VALUE" x="121.92" y="43.18" size="1.778" layer="96" align="center"/>
 </instance>
-<instance part="C15" gate="G$1" x="93.98" y="55.88" smashed="yes" rot="R90">
-<attribute name="NAME" x="91.44" y="55.88" size="1.27" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="96.52" y="55.88" size="1.27" layer="96" rot="R90" align="center"/>
-</instance>
 <instance part="C16" gate="G$1" x="86.36" y="55.88" smashed="yes" rot="R90">
 <attribute name="NAME" x="83.82" y="55.88" size="1.27" layer="95" rot="R90" align="center"/>
 <attribute name="VALUE" x="88.9" y="55.88" size="1.27" layer="96" rot="R90" align="center"/>
@@ -2413,10 +2378,6 @@
 </instance>
 <instance part="U$12" gate="G$1" x="101.6" y="76.2" smashed="yes">
 <attribute name="VALUE" x="101.6" y="78.74" size="1.778" layer="96" rot="R180" align="center"/>
-</instance>
-<instance part="C17" gate="G$1" x="101.6" y="55.88" smashed="yes" rot="R90">
-<attribute name="NAME" x="99.06" y="55.88" size="1.27" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="104.14" y="55.88" size="1.27" layer="96" rot="R90" align="center"/>
 </instance>
 <instance part="GND31" gate="G$1" x="101.6" y="45.72" smashed="yes">
 <attribute name="VALUE" x="101.6" y="43.18" size="1.778" layer="96" align="center"/>
@@ -2685,6 +2646,18 @@
 <attribute name="NAME" x="383.54" y="121.92" size="1.27" layer="95" align="center"/>
 <attribute name="VALUE" x="383.54" y="116.84" size="1.27" layer="96" align="center"/>
 </instance>
+<instance part="CN2" gate="G$1" x="35.56" y="96.52" smashed="yes">
+<attribute name="NAME" x="27.94" y="109.22" size="1.778" layer="95"/>
+<attribute name="VALUE" x="27.94" y="106.68" size="1.778" layer="96"/>
+</instance>
+<instance part="C15" gate="G$1" x="93.98" y="55.88" smashed="yes" rot="R90">
+<attribute name="NAME" x="91.44" y="55.88" size="1.27" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="96.52" y="55.88" size="1.27" layer="96" rot="R90" align="center"/>
+</instance>
+<instance part="C17" gate="G$1" x="101.6" y="55.88" smashed="yes" rot="R90">
+<attribute name="NAME" x="99.06" y="55.88" size="1.27" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="104.14" y="55.88" size="1.27" layer="96" rot="R90" align="center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -2711,15 +2684,10 @@
 <wire x1="353.06" y1="157.48" x2="353.06" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="CN2" gate="G$1" pin="SHIELD"/>
-<pinref part="GND25" gate="G$1" pin="GND"/>
-<wire x1="33.02" y1="86.36" x2="33.02" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="CN2" gate="G$1" pin="GND"/>
 <pinref part="GND26" gate="G$1" pin="GND"/>
-<wire x1="48.26" y1="86.36" x2="48.26" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="93.98" x2="45.72" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="86.36" x2="48.26" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="CN2" gate="G$1" pin="GND"/>
+<wire x1="45.72" y1="91.44" x2="48.26" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U6" gate="G$1" pin="GND"/>
@@ -2732,9 +2700,9 @@
 <pinref part="U7" gate="G$1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C15" gate="G$1" pin="1"/>
 <pinref part="GND29" gate="G$1" pin="GND"/>
 <wire x1="93.98" y1="48.26" x2="93.98" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="C15" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="C16" gate="G$1" pin="1"/>
@@ -2742,9 +2710,9 @@
 <wire x1="86.36" y1="48.26" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C17" gate="G$1" pin="1"/>
 <pinref part="GND31" gate="G$1" pin="GND"/>
 <wire x1="101.6" y1="50.8" x2="101.6" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="C17" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="SW1" gate="G$1" pin="2"/>
@@ -2907,15 +2875,15 @@
 <junction x="101.6" y="63.5"/>
 <junction x="101.6" y="68.58"/>
 <junction x="101.6" y="71.12"/>
-<pinref part="C17" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="63.5" x2="101.6" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="60.96" x2="101.6" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="C15" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="60.96" x2="93.98" y2="63.5" width="0.1524" layer="91"/>
 <junction x="93.98" y="63.5"/>
 <pinref part="U7" gate="G$1" pin="VCC"/>
 <pinref part="U7" gate="G$1" pin="VCCIO"/>
 <pinref part="U7" gate="G$1" pin="3V3OUT"/>
+<pinref part="C15" gate="G$1" pin="2"/>
+<pinref part="C17" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="U7" gate="G$1" pin="!RESET"/>
@@ -3017,18 +2985,18 @@
 </net>
 <net name="N$95" class="0">
 <segment>
-<pinref part="CN2" gate="G$1" pin="D-"/>
 <pinref part="U6" gate="G$1" pin="D-OUT"/>
 <wire x1="45.72" y1="96.52" x2="68.58" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="CN2" gate="G$1" pin="D-"/>
 </segment>
 </net>
 <net name="N$96" class="0">
 <segment>
-<pinref part="CN2" gate="G$1" pin="D+"/>
 <wire x1="45.72" y1="99.06" x2="63.5" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="99.06" x2="66.04" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="U6" gate="G$1" pin="D+_OUT"/>
 <wire x1="66.04" y1="101.6" x2="68.58" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="CN2" gate="G$1" pin="D+"/>
 </segment>
 </net>
 <net name="N$97" class="0">
