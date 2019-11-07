@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1792,6 +1792,16 @@
 <wire x1="2.25" y1="-1" x2="-2.25" y2="-1" width="0.125" layer="21"/>
 <wire x1="-2.25" y1="-1" x2="-2.25" y2="1" width="0.125" layer="21"/>
 </package>
+<package name="0603">
+<description>Standard imperial 0603.</description>
+<smd name="2" x="0.75" y="0" dx="0.8" dy="0.8" layer="1"/>
+<smd name="1" x="-0.75" y="0" dx="0.8" dy="0.8" layer="1"/>
+<text x="-1.5" y="0.75" size="1.016" layer="25">&gt;NAME</text>
+<wire x1="-1.375" y1="0.625" x2="1.375" y2="0.625" width="0.125" layer="21"/>
+<wire x1="1.375" y1="0.625" x2="1.375" y2="-0.625" width="0.125" layer="21"/>
+<wire x1="1.375" y1="-0.625" x2="-1.375" y2="-0.625" width="0.125" layer="21"/>
+<wire x1="-1.375" y1="-0.625" x2="-1.375" y2="0.625" width="0.125" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="RESISTOR">
@@ -1823,6 +1833,28 @@
 <attribute name="HEIGHT" value="0.65" constant="no"/>
 <attribute name="PRICE_PER" value="0.08" constant="no"/>
 <attribute name="VALUE" value="1R" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CRCW06030000Z0EA" prefix="R">
+<description>0 0R 0603 0.1W thick film resistor</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY" value="541-0.0GCT-ND" constant="no"/>
+<attribute name="HEIGHT" value="0.5" constant="no"/>
+<attribute name="PRICE_PER" value="0.08" constant="no"/>
+<attribute name="VALUE" value="0R" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2284,6 +2316,9 @@
 <part name="TP10" library="MISC" deviceset="2MM_TEST_POINT" device=""/>
 <part name="TP11" library="MISC" deviceset="2MM_TEST_POINT" device=""/>
 <part name="GND79" library="NETS" deviceset="GND" device=""/>
+<part name="R23" library="RESISTORS" deviceset="CRCW06030000Z0EA" device="" value="0R"/>
+<part name="R24" library="RESISTORS" deviceset="CRCW06030000Z0EA" device="" value="0R"/>
+<part name="R34" library="r_0603" deviceset="ERJ3EKF5101V" device="" value="5.1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -2638,6 +2673,18 @@
 <instance part="GND79" gate="G$1" x="-2.54" y="314.96" smashed="yes">
 <attribute name="VALUE" x="-2.54" y="312.42" size="1.778" layer="96" align="center"/>
 </instance>
+<instance part="R23" gate="G$1" x="233.68" y="134.62" smashed="yes">
+<attribute name="NAME" x="233.68" y="137.16" size="1.27" layer="95" align="center"/>
+<attribute name="VALUE" x="233.68" y="132.08" size="1.27" layer="96" align="center"/>
+</instance>
+<instance part="R24" gate="G$1" x="233.68" y="127" smashed="yes">
+<attribute name="NAME" x="233.68" y="129.54" size="1.27" layer="95" align="center"/>
+<attribute name="VALUE" x="233.68" y="124.46" size="1.27" layer="96" align="center"/>
+</instance>
+<instance part="R34" gate="G$1" x="383.54" y="119.38" smashed="yes">
+<attribute name="NAME" x="383.54" y="121.92" size="1.27" layer="95" align="center"/>
+<attribute name="VALUE" x="383.54" y="116.84" size="1.27" layer="96" align="center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -2813,6 +2860,11 @@
 <wire x1="-5.08" y1="320.04" x2="-2.54" y2="320.04" width="0.1524" layer="91"/>
 <pinref part="GND79" gate="G$1" pin="GND"/>
 <wire x1="-2.54" y1="320.04" x2="-2.54" y2="317.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="388.62" y1="119.38" x2="411.48" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="R34" gate="G$1" pin="2"/>
+<label x="391.16" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -3036,6 +3088,11 @@
 <junction x="246.38" y="71.12"/>
 <label x="251.46" y="71.12" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="228.6" y1="134.62" x2="198.12" y2="134.62" width="0.1524" layer="91"/>
+<label x="200.66" y="134.62" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="ESP32_UART_!DTR" class="0">
 <segment>
@@ -3053,6 +3110,11 @@
 <wire x1="243.84" y1="93.98" x2="248.92" y2="93.98" width="0.1524" layer="91"/>
 <junction x="248.92" y="93.98"/>
 <label x="251.46" y="93.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R24" gate="G$1" pin="1"/>
+<wire x1="228.6" y1="127" x2="198.12" y2="127" width="0.1524" layer="91"/>
+<label x="200.66" y="127" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$99" class="0">
@@ -3379,6 +3441,37 @@
 <pinref part="U1" gate="G$1" pin="PB11"/>
 <wire x1="218.44" y1="210.82" x2="248.92" y2="210.82" width="0.1524" layer="91"/>
 <label x="220.98" y="210.82" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ESP_IO13" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="IO13"/>
+<wire x1="375.92" y1="101.6" x2="411.48" y2="101.6" width="0.1524" layer="91"/>
+<label x="378.46" y="101.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R23" gate="G$1" pin="2"/>
+<wire x1="238.76" y1="134.62" x2="269.24" y2="134.62" width="0.1524" layer="91"/>
+<label x="241.3" y="134.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ESP_IO15" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="IO15"/>
+<wire x1="375.92" y1="96.52" x2="411.48" y2="96.52" width="0.1524" layer="91"/>
+<label x="378.46" y="96.52" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R24" gate="G$1" pin="2"/>
+<wire x1="238.76" y1="127" x2="269.24" y2="127" width="0.1524" layer="91"/>
+<label x="241.3" y="127" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="IO2"/>
+<wire x1="375.92" y1="119.38" x2="378.46" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="R34" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
