@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.125" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
+<grid distance="0.25" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -150,7 +150,7 @@
 <layer number="254" name="cooling" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYjllNWFm" projecturn="a.cGVyc29uYWw6dWUyYjllNWFmIzIwMTkxMDE5MjI4NzM0NTgx" f3durn="urn:adsk.wipprod:dm.lineage:c_JeT0lITXCc1k8J0YYWbw" pcbguid="5d53bc27-9163-4ab3-a22c-c60f97ca62a7" lastpulledtime="2019-10-21T11:33:37Z" lastsyncedchangeguid="ada0fcd0-7678-9317-fd19-94206f447312"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYjllNWFm" projecturn="a.cGVyc29uYWw6dWUyYjllNWFmIzIwMTkxMDE5MjI4NzM0NTgx" f3durn="urn:adsk.wipprod:dm.lineage:c_JeT0lITXCc1k8J0YYWbw" pcbguid="5d53bc27-9163-4ab3-a22c-c60f97ca62a7" lastpulledtime="2019-10-21T11:33:37Z" lastsyncedchangeguid="780272ca-a25e-178c-0c01-f5c4de3bb5f4"/>
 <plain>
 <hole x="0" y="9.5" drill="2.2"/>
 <hole x="0" y="-19" drill="2.2"/>
@@ -175,21 +175,11 @@
 </polygon>
 <rectangle x1="-2" y1="-32" x2="2" y2="-7.5" layer="48"/>
 <rectangle x1="-2" y1="7.5" x2="2" y2="32" layer="48"/>
+<circle x="0" y="-19" radius="2" width="0.15" layer="21"/>
+<circle x="0" y="9.5" radius="2" width="0.15" layer="21"/>
+<circle x="0" y="23.75" radius="2" width="0.15" layer="21"/>
 </plain>
 <libraries>
-<library name="OPTO">
-<packages>
-<package name="JE2835AWT">
-<smd name="K" x="-0.725" y="0" dx="2" dy="1.8" layer="1"/>
-<smd name="A" x="1.225" y="0" dx="1" dy="1.8" layer="1"/>
-<wire x1="-1.875" y1="-1" x2="1.875" y2="-1" width="0.125" layer="21"/>
-<wire x1="1.875" y1="-1" x2="1.875" y2="1" width="0.125" layer="21"/>
-<wire x1="1.875" y1="1" x2="-1.875" y2="1" width="0.125" layer="21"/>
-<wire x1="-1.875" y1="1" x2="-1.875" y2="-1" width="0.125" layer="21"/>
-<text x="-1.875" y="1.125" size="1" layer="25">&gt;NAME</text>
-</package>
-</packages>
-</library>
 <library name="DIODES">
 <packages>
 <package name="SOT23-3">
@@ -201,6 +191,16 @@
 <wire x1="1.75" y1="1.75" x2="1.75" y2="-1.75" width="0.122" layer="21"/>
 <wire x1="1.75" y1="-1.75" x2="-1.75" y2="-1.75" width="0.122" layer="21"/>
 <wire x1="-1.75" y1="-1.75" x2="-1.75" y2="1.75" width="0.122" layer="21"/>
+</package>
+</packages>
+</library>
+<library name="OPTO">
+<packages>
+<package name="MP-1616">
+<smd name="A" x="-0.5" y="0" dx="0.575" dy="1.5" layer="1"/>
+<smd name="K" x="0.5" y="0" dx="0.575" dy="1.5" layer="1"/>
+<wire x1="0.875" y1="0.75" x2="0.875" y2="-0.75" width="0.1524" layer="21"/>
+<text x="-0.75" y="1" size="1" layer="25">&gt;NAME</text>
 </package>
 </packages>
 </library>
@@ -393,56 +393,6 @@ einem neuen Namen ab.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="D1" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="28.5" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="28.5" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="28.5" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="28.5" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
-<element name="D2" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="19" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="19" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="19" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="19" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
-<element name="D3" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="14.25" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="14.25" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="14.25" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="14.25" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
-<element name="D4" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="4.75" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="4.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="4.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="4.75" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
-<element name="D5" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="0" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="0" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="0" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="0" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
-<element name="D6" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="-4.75" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="-4.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="-4.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="-4.75" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
-<element name="D7" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="-9.5" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="-9.5" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="-9.5" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="-9.5" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
-<element name="D8" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="-14.25" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="-14.25" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="-14.25" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="-14.25" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
-<element name="D9" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="-23.75" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="-23.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="-23.75" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="-23.75" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
-<element name="D14" library="OPTO" package="JE2835AWT" value="3500K" x="0" y="-28.5" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="JE2835AWT-00-0000-0B0A0UF735ECT-ND" x="0" y="-28.5" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="HEIGHT" value="0.7" x="0" y="-28.5" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE_PER" value="0.08" x="0" y="-28.5" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
 <element name="D15" library="DIODES" package="SOT23-3" value="BAV99" x="0" y="1.75" smashed="yes" rot="MR0">
 <attribute name="DIGIKEY" value="BAV99Q-7-FDICT-ND" x="0" y="1.75" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="HEIGHT" value="1.2" x="0" y="1.75" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -457,106 +407,54 @@ einem neuen Namen ab.</description>
 <attribute name="PRICE_PER" value="0.15" x="0" y="-5.25" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" value="BAV99" x="0" y="-5.25" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
+<element name="D1" library="OPTO" package="MP-1616" value="3000K" x="0" y="27.5" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="1214-1518-1-ND" x="0" y="27.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="1" x="0" y="27.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE_PER" value="0.3" x="0" y="27.5" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="D2" library="OPTO" package="MP-1616" value="3000K" x="0" y="20.375" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="1214-1518-1-ND" x="0" y="20.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="1" x="0" y="20.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE_PER" value="0.3" x="0" y="20.375" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="D3" library="OPTO" package="MP-1616" value="3000K" x="0" y="13.25" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="1214-1518-1-ND" x="0" y="13.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="1" x="0" y="13.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE_PER" value="0.3" x="0" y="13.25" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="D4" library="OPTO" package="MP-1616" value="3000K" x="0" y="6.125" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="1214-1518-1-ND" x="0" y="6.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="1" x="0" y="6.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE_PER" value="0.3" x="0" y="6.125" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="D5" library="OPTO" package="MP-1616" value="3000K" x="0" y="-1" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="1214-1518-1-ND" x="0" y="-1" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="1" x="0" y="-1" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE_PER" value="0.3" x="0" y="-1" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="D6" library="OPTO" package="MP-1616" value="3000K" x="0" y="-8.125" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="1214-1518-1-ND" x="0" y="-8.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="1" x="0" y="-8.125" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE_PER" value="0.3" x="0" y="-8.125" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="D7" library="OPTO" package="MP-1616" value="3000K" x="0" y="-15.25" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="1214-1518-1-ND" x="0" y="-15.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="1" x="0" y="-15.25" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE_PER" value="0.3" x="0" y="-15.25" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="D8" library="OPTO" package="MP-1616" value="3000K" x="0" y="-22.375" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="1214-1518-1-ND" x="0" y="-22.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="1" x="0" y="-22.375" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE_PER" value="0.3" x="0" y="-22.375" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="D9" library="OPTO" package="MP-1616" value="3000K" x="0" y="-29.5" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="1214-1518-1-ND" x="0" y="-29.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="HEIGHT" value="1" x="0" y="-29.5" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE_PER" value="0.3" x="0" y="-29.5" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
 </elements>
 <signals>
-<signal name="N$1">
-<contactref element="D1" pad="K"/>
-<contactref element="D2" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="19.75"/>
-<vertex x="2" y="28.75"/>
-<vertex x="-2" y="28.75"/>
-<vertex x="-2" y="19.75"/>
-</polygon>
-</signal>
-<signal name="N$2">
-<contactref element="D2" pad="K"/>
-<contactref element="D3" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="15"/>
-<vertex x="2" y="19.25"/>
-<vertex x="-2" y="19.25"/>
-<vertex x="-2" y="15"/>
-</polygon>
-</signal>
-<signal name="N$3">
-<contactref element="D3" pad="K"/>
-<contactref element="D4" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="5.5"/>
-<vertex x="2" y="14.5"/>
-<vertex x="-2" y="14.5"/>
-<vertex x="-2" y="5.5"/>
-</polygon>
-</signal>
-<signal name="N$4">
-<contactref element="D5" pad="K"/>
-<contactref element="D6" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="-4"/>
-<vertex x="2" y="0.25"/>
-<vertex x="-2" y="0.25"/>
-<vertex x="-2" y="-4"/>
-</polygon>
-</signal>
-<signal name="N$5">
-<contactref element="D6" pad="K"/>
-<contactref element="D7" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="-8.75"/>
-<vertex x="2" y="-4.5"/>
-<vertex x="-2" y="-4.5"/>
-<vertex x="-2" y="-8.75"/>
-</polygon>
-</signal>
-<signal name="N$6">
-<contactref element="D7" pad="K"/>
-<contactref element="D8" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="-13.5"/>
-<vertex x="2" y="-9.25"/>
-<vertex x="-2" y="-9.25"/>
-<vertex x="-2" y="-13.5"/>
-</polygon>
-</signal>
-<signal name="N$18">
-<contactref element="D8" pad="K"/>
-<contactref element="D9" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="-23"/>
-<vertex x="2" y="-14"/>
-<vertex x="-2" y="-14"/>
-<vertex x="-2" y="-23"/>
-</polygon>
-</signal>
-<signal name="N$19">
-<contactref element="D4" pad="K"/>
-<contactref element="D5" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="0.75"/>
-<vertex x="2" y="5"/>
-<vertex x="-2" y="5"/>
-<vertex x="-2" y="0.75"/>
-</polygon>
-</signal>
 <signal name="CATHODE">
-<contactref element="D14" pad="K"/>
-<via x="0" y="-31.5" extent="1-16" drill="0.3"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="-32"/>
-<vertex x="2" y="-28.25"/>
-<vertex x="-2" y="-28.25"/>
-<vertex x="-2" y="-32"/>
-</polygon>
-<via x="-0.5" y="-31.5" extent="1-16" drill="0.3"/>
-<via x="-1" y="-31.5" extent="1-16" drill="0.3"/>
-<via x="-1" y="-31" extent="1-16" drill="0.3"/>
-<via x="-0.5" y="-31" extent="1-16" drill="0.3"/>
-<via x="0" y="-31" extent="1-16" drill="0.3"/>
-<via x="0.5" y="-31" extent="1-16" drill="0.3"/>
-<via x="1" y="-31" extent="1-16" drill="0.3"/>
-<via x="1" y="-31.5" extent="1-16" drill="0.3"/>
-<via x="0.5" y="-31.5" extent="1-16" drill="0.3"/>
 <contactref element="D15" pad="1"/>
 <contactref element="D16" pad="1"/>
 <polygon width="0.15" layer="16" thermals="no" rank="3">
@@ -567,25 +465,29 @@ einem neuen Namen ab.</description>
 <vertex x="0.25" y="-30.75"/>
 <vertex x="-2" y="-30.75"/>
 </polygon>
+<contactref element="D9" pad="K"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="-32"/>
+<vertex x="2" y="-32"/>
+<vertex x="2" y="-29.75"/>
+<vertex x="-2" y="-29.75"/>
+</polygon>
+<via x="0" y="-31.5" extent="1-16" drill="0.3"/>
+<via x="0" y="-31" extent="1-16" drill="0.3"/>
+<via x="0.5" y="-31.5" extent="1-16" drill="0.3"/>
+<via x="1" y="-31.5" extent="1-16" drill="0.3"/>
+<via x="1.5" y="-31.5" extent="1-16" drill="0.3"/>
+<via x="1.5" y="-31" extent="1-16" drill="0.3"/>
+<via x="1" y="-31" extent="1-16" drill="0.3"/>
+<via x="0.5" y="-31" extent="1-16" drill="0.3"/>
+<via x="-0.5" y="-31" extent="1-16" drill="0.3"/>
+<via x="-1" y="-31" extent="1-16" drill="0.3"/>
+<via x="-1.5" y="-31" extent="1-16" drill="0.3"/>
+<via x="-1.5" y="-31.5" extent="1-16" drill="0.3"/>
+<via x="-1" y="-31.5" extent="1-16" drill="0.3"/>
+<via x="-0.5" y="-31.5" extent="1-16" drill="0.3"/>
 </signal>
 <signal name="ANODE">
-<contactref element="D1" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="29.25"/>
-<vertex x="2" y="32"/>
-<vertex x="-2" y="32"/>
-<vertex x="-2" y="29.25"/>
-</polygon>
-<via x="0" y="31.5" extent="1-16" drill="0.3"/>
-<via x="-0.5" y="31.5" extent="1-16" drill="0.3"/>
-<via x="-1" y="31.5" extent="1-16" drill="0.3"/>
-<via x="-1" y="31" extent="1-16" drill="0.3"/>
-<via x="-0.5" y="31" extent="1-16" drill="0.3"/>
-<via x="0" y="31" extent="1-16" drill="0.3"/>
-<via x="0.5" y="31" extent="1-16" drill="0.3"/>
-<via x="1" y="31" extent="1-16" drill="0.3"/>
-<via x="1" y="31.5" extent="1-16" drill="0.3"/>
-<via x="0.5" y="31.5" extent="1-16" drill="0.3"/>
 <contactref element="D15" pad="3"/>
 <contactref element="D16" pad="3"/>
 <polygon width="0.15" layer="16" thermals="no" rank="3">
@@ -596,16 +498,27 @@ einem neuen Namen ab.</description>
 <vertex x="-0.25" y="30.75"/>
 <vertex x="2" y="30.75"/>
 </polygon>
-</signal>
-<signal name="N$7">
-<contactref element="D9" pad="K"/>
-<contactref element="D14" pad="A"/>
-<polygon width="0.15" layer="1">
-<vertex x="2" y="-27.75"/>
-<vertex x="2" y="-23.5"/>
-<vertex x="-2" y="-23.5"/>
-<vertex x="-2" y="-27.75"/>
+<contactref element="D1" pad="A"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="27.75"/>
+<vertex x="2" y="27.75"/>
+<vertex x="2" y="32"/>
+<vertex x="-2" y="32"/>
 </polygon>
+<via x="0" y="31.5" extent="1-16" drill="0.3"/>
+<via x="0" y="31" extent="1-16" drill="0.3"/>
+<via x="0.5" y="31" extent="1-16" drill="0.3"/>
+<via x="1" y="31" extent="1-16" drill="0.3"/>
+<via x="1.5" y="31" extent="1-16" drill="0.3"/>
+<via x="1.5" y="31.5" extent="1-16" drill="0.3"/>
+<via x="1" y="31.5" extent="1-16" drill="0.3"/>
+<via x="0.5" y="31.5" extent="1-16" drill="0.3"/>
+<via x="-0.5" y="31.5" extent="1-16" drill="0.3"/>
+<via x="-1" y="31.5" extent="1-16" drill="0.3"/>
+<via x="-1.5" y="31.5" extent="1-16" drill="0.3"/>
+<via x="-1.5" y="31" extent="1-16" drill="0.3"/>
+<via x="-1" y="31" extent="1-16" drill="0.3"/>
+<via x="-0.5" y="31" extent="1-16" drill="0.3"/>
 </signal>
 <signal name="IN1">
 <contactref element="D15" pad="2"/>
@@ -629,6 +542,86 @@ einem neuen Namen ab.</description>
 <vertex x="-2" y="-30.5"/>
 <vertex x="-2" y="-7"/>
 <vertex x="-0.5" y="-7"/>
+</polygon>
+</signal>
+<signal name="N$1">
+<contactref element="D1" pad="K"/>
+<contactref element="D2" pad="A"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="20.625"/>
+<vertex x="2" y="20.625"/>
+<vertex x="2" y="27.25"/>
+<vertex x="-2" y="27.25"/>
+</polygon>
+</signal>
+<signal name="N$2">
+<contactref element="D2" pad="K"/>
+<contactref element="D3" pad="A"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="13.5"/>
+<vertex x="2" y="13.5"/>
+<vertex x="2" y="20.125"/>
+<vertex x="-2" y="20.125"/>
+</polygon>
+</signal>
+<signal name="N$3">
+<contactref element="D3" pad="K"/>
+<contactref element="D4" pad="A"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="6.375"/>
+<vertex x="2" y="6.375"/>
+<vertex x="2" y="13"/>
+<vertex x="-2" y="13"/>
+</polygon>
+</signal>
+<signal name="N$4">
+<contactref element="D4" pad="K"/>
+<contactref element="D5" pad="A"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="-0.75"/>
+<vertex x="2" y="-0.75"/>
+<vertex x="2" y="5.875"/>
+<vertex x="-2" y="5.875"/>
+</polygon>
+</signal>
+<signal name="N$5">
+<contactref element="D5" pad="K"/>
+<contactref element="D6" pad="A"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="-7.875"/>
+<vertex x="2" y="-7.875"/>
+<vertex x="2" y="-1.25"/>
+<vertex x="-2" y="-1.25"/>
+</polygon>
+</signal>
+<signal name="N$6">
+<contactref element="D6" pad="K"/>
+<contactref element="D7" pad="A"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="-15"/>
+<vertex x="2" y="-15"/>
+<vertex x="2" y="-8.375"/>
+<vertex x="-2" y="-8.375"/>
+</polygon>
+</signal>
+<signal name="N$7">
+<contactref element="D7" pad="K"/>
+<contactref element="D8" pad="A"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="-22.125"/>
+<vertex x="2" y="-22.125"/>
+<vertex x="2" y="-15.5"/>
+<vertex x="-2" y="-15.5"/>
+</polygon>
+</signal>
+<signal name="N$8">
+<contactref element="D8" pad="K"/>
+<contactref element="D9" pad="A"/>
+<polygon width="0.15" layer="1" thermals="no">
+<vertex x="-2" y="-29.25"/>
+<vertex x="2" y="-29.25"/>
+<vertex x="2" y="-22.625"/>
+<vertex x="-2" y="-22.625"/>
 </polygon>
 </signal>
 </signals>
