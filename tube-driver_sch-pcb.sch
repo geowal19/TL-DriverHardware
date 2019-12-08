@@ -2455,13 +2455,6 @@
 <label x="381" y="124.46" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="USR_BTN_ESP" class="0">
-<segment>
-<pinref part="U5" gate="G$1" pin="IO5"/>
-<wire x1="375.92" y1="111.76" x2="411.48" y2="111.76" width="0.1524" layer="91"/>
-<label x="378.46" y="111.76" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="ESP_IO13" class="0">
 <segment>
 <pinref part="U5" gate="G$1" pin="IO13"/>
@@ -2638,6 +2631,34 @@
 <pinref part="U4" gate="G$1" pin="R"/>
 <wire x1="129.54" y1="190.5" x2="160.02" y2="190.5" width="0.1524" layer="91"/>
 <label x="134.62" y="190.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LED_PWM_0" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="IO5"/>
+<wire x1="375.92" y1="111.76" x2="411.48" y2="111.76" width="0.1524" layer="91"/>
+<label x="378.46" y="111.76" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LED_PWM_1" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="IO18"/>
+<wire x1="375.92" y1="88.9" x2="411.48" y2="88.9" width="0.1524" layer="91"/>
+<label x="378.46" y="88.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LED_PWM_2" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="IO19"/>
+<wire x1="375.92" y1="86.36" x2="411.48" y2="86.36" width="0.1524" layer="91"/>
+<label x="378.46" y="86.36" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LED_PWM_3" class="0">
+<segment>
+<pinref part="U5" gate="G$1" pin="IO21"/>
+<wire x1="375.92" y1="81.28" x2="411.48" y2="81.28" width="0.1524" layer="91"/>
+<label x="378.46" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -3735,7 +3756,18 @@
 <pinref part="CN5" gate="G$1" pin="P$1"/>
 </segment>
 </net>
-<net name="LED_PWM_3" class="0">
+<net name="LED_PWM_1" class="0">
+<segment>
+<pinref part="U8" gate="G$1" pin="EN"/>
+<wire x1="58.42" y1="233.68" x2="25.4" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="R31" gate="G$1" pin="2"/>
+<wire x1="25.4" y1="233.68" x2="2.54" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="218.44" x2="25.4" y2="233.68" width="0.1524" layer="91"/>
+<junction x="25.4" y="233.68"/>
+<label x="5.08" y="233.68" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LED_PWM_0" class="0">
 <segment>
 <pinref part="U10" gate="G$1" pin="EN"/>
 <wire x1="58.42" y1="332.74" x2="25.4" y2="332.74" width="0.1524" layer="91"/>
@@ -3748,17 +3780,6 @@
 </net>
 <net name="LED_PWM_2" class="0">
 <segment>
-<pinref part="U8" gate="G$1" pin="EN"/>
-<wire x1="58.42" y1="233.68" x2="25.4" y2="233.68" width="0.1524" layer="91"/>
-<pinref part="R31" gate="G$1" pin="2"/>
-<wire x1="25.4" y1="233.68" x2="2.54" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="218.44" x2="25.4" y2="233.68" width="0.1524" layer="91"/>
-<junction x="25.4" y="233.68"/>
-<label x="5.08" y="233.68" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="LED_PWM_1" class="0">
-<segment>
 <pinref part="U3" gate="G$1" pin="EN"/>
 <wire x1="58.42" y1="134.62" x2="25.4" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="2"/>
@@ -3768,7 +3789,7 @@
 <label x="5.08" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="LED_PWM_0" class="0">
+<net name="LED_PWM_3" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="EN"/>
 <wire x1="58.42" y1="35.56" x2="25.4" y2="35.56" width="0.1524" layer="91"/>
